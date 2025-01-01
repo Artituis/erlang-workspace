@@ -8,7 +8,7 @@ docker build -t erlang-workspace-image .
 
 To run the image
 ```
-docker run --name erlang-workspace-container --mount type=bind,src=[ABSOLUTE_PATH_TO_THE_DIRECTORY],dst=/code  erlang-workspace-image
+docker run --name erlang-workspace-container -d --mount type=bind,src=[ABSOLUTE_PATH_TO_THE_DIRECTORY],dst=/code  --net=host erlang-workspace-image
 ```
 
 And then to acces the terminal inside with the code run
